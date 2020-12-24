@@ -1,0 +1,43 @@
+{% load static %}
+<!-- This contains the header & footer for the website -->
+<!-- Content is non-existent so that must be replaced in specific html files -->
+
+<!doctype html>
+<title>{% block title %}Josh Website{% endblock %}</title>
+
+<head>
+    <!-- Fix this css portion -->
+    <link rel="stylesheet" href="{% static 'main/main.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% block head %}{% endblock %}
+</head>
+
+<div class = "header">
+    {% block header %}
+    <div class = "logo_container">
+        <h1 style="padding-left: 5px; font-size:30px;">Josh's Website</h1>
+    </div>
+    
+    <ul class="nav-links">
+        <a href='/'><li>Home</li></a>
+        <a href='/contact'><li>Contact</li></a>
+    </ul>
+    {% endblock %}
+</div>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+<div class = "prefooter">
+{% block prefooter %}
+    <p>This is a prefooter</p>
+{% endblock %}
+</div>
+
+<div class="footer">
+    {% block footer %}
+        <p>This is a footer</p>
+    {% endblock %}
+</div>

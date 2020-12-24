@@ -1,0 +1,189 @@
+{% extends 'main/base.html' %}
+        
+        {% block content %}
+
+        <div class = "parallax2">
+            <div class=parallax2-content>
+                <div class="center-text">
+                    <span style="font-weight: bold;">Hi I'm Josh.</span> I'm a <span style="font-style: italic;">DevOps</span> Engineer
+                </div>
+
+                <div class="note-text">
+                    <span style="font-style: italic;"><a href="/contact" class="contactButton">Contact me here!</a></span>
+                </div>
+
+                <div class="socials">
+                        <a href="https://www.linkedin.com/in/josh-silva-136b50132/"><img src="../static/img/linkedin.png" width="50px" height="50px" alt=""></a>
+                        <br>
+                        <a href="https://www.github.com/josholiversilva"><img src="../static/img/github.png" width="50px" height="50px" alt=""></a>
+                        <br>
+                        <a href="https://www.facebook.com/josh.silva.1612"><img src="../static/img/fb.png" width="50px" height="50px" alt=""></a>
+                        <br>
+                        <a href="https://www.instagram.com/akingjosh"><img src="../static/img/ig.png" width="50px" height="50px" alt=""></a>
+                </div>
+
+                <div class="socials-mobile">
+                        <a href="https://www.linkedin.com/in/josh-silva-136b50132/"><img src="../static/img/linkedin.png" width="20px" height="20px" padding-right="5px" alt=""></a>
+                        <a href="https://www.github.com/josholiversilva"><img src="../static/img/github.png" width="20px" height="20px" padding-right="5px" alt=""></a>
+                        <a href="https://www.facebook.com/josh.silva.1612"><img src="../static/img/fb.png" width="20px" height="20px" padding-right="5px" alt=""></a>
+                        <a href="https://www.instagram.com/akingjosh"><img src="../static/img/ig.png" width="20px" height="20px" padding-right="5px" alt=""></a>
+                </div>
+
+            </div>
+
+                <script>
+                    
+                    //Center Text
+                    $(window).scroll(function() {
+                        if ($(this).scrollTop() > 0) {
+                          $('.center-text').fadeOut();
+                        } else {
+                          $('.center-text').fadeIn();
+                        }
+                      });
+
+                    //Note Text
+                    $(window).scroll(function() {
+                        if ($(this).scrollTop() > 0) {
+                          $('.note-text').fadeOut();
+                        } else {
+                          $('.note-text').fadeIn();
+                        }
+                      });
+
+                      //Socials - Desktop
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 0) {
+                      $('.socials').fadeOut();
+                    } else if ($(this).scrollTop() == 0 && ($('.socials-mobile').css('display') == 'none')) {
+                      $('.socials').fadeIn();
+                    }
+                  });
+                </script>
+        </div>
+
+        <div class="container">
+
+            <div class="about_me">
+                <section id = "about">
+                    <h1>Welcome</h1>                     
+                            <i style="font-weight: bold; line-height: 2.0;">Values</i>
+                            <br>
+
+                            <span style="padding-left: 20px; line-height: 2.0;">I like to keep things simple, yet sophisticated in the background. Most of my interests
+                            fall in the back-end software realm, where developing & operating infrastructure is apparent. On the side, I like to work on websites just for
+                            the fun of it; especially if it'll help someone out.</span><br /><br />
+                            </p>
+
+                            <br>
+                            <br>
+
+                            <i class ="statement" style="font-size: 12px; font:gray;">
+                            Thanks for checking out the site, and if you want to collaborate or speak to me about anything,
+                            then my socials are at the top of the page! :) 
+                            </i>                       
+
+                            <br>
+                            <br>
+
+                </section>
+            </div>
+
+            <div class="devops">
+                <section id="devops">
+                    <h1>DevOps</h1>
+
+                        <i style="font-weight: bold;">What is DevOps?</i>
+                        <p>A practice that incorporates continuous integration and continuous delivery within a deployment stack.
+                        </p>
+
+                        <br />
+                        <br />
+
+                        <i style="font-weight: bold;">What do you do in DevOps?</i><br /><br /><br />
+
+                            <p>
+                                I
+                            </p>
+
+                            <p>
+                                <span style="font-style: italic;">Automate</span><br />
+                                <span style="padding-left: 20px; line-height: 2.0;">Scripts - Python, golang, shell, Jenkins..</span>
+                            </p>
+
+                            <p>
+                            <span style="font-style: italic;">Operate</span><br />
+                            <span style="padding-left: 20px; line-height: 2.0;">Setup, configure, and provision: databases, web, cloud..</span>
+                            </p>
+
+                            <p>
+                            <span style="font-style: italic;">Develop</span><br />
+                            <span style="padding-left: 20px; line-height: 2.0;">Infrastructure-as-cold, back-end libraries, tools, and CI/CD pipelines.</span>
+                            </p>
+
+                </section>
+            </div>
+
+
+            <div class="projects">
+                <section id = "projects">
+                    <h1>Projects</h1>
+
+                        <!-- Begin Project Contents -->
+                        <p>     
+
+                                <!-- Project 1 - "Giveaway" -->
+                                <a href="https://irisnboba-giveaway.herokuapp.com/"><h2 style="text-decoration: none; font-size:30px;">Giveaway App</h2></a>
+                                <p><b>Tools: </b> golang, HTML/CSS/Javascript, mySQL</p>
+                                <p><b>Type: </b> Web Application</p>
+                                <p><b>Function: </b> Name Randomizer via SQL database</p>
+                                <p><b>Description: </b> For "irisnboba" 1k followers Christmas Giveaway. Lots of animation & decoration. <br> <span style="font-style:italic; color: red;">12-23-2020: UI fixed for ipad pro. All other platforms are ugly</span></p>
+
+                        <br>
+                        <br>  
+
+                                <!-- Project 2 - "Boba Recommender" -->
+                                <a href=""><h2 style="text-decoration: none; font-size:30px;">Boba Recommender</h2></a>
+                                <p><b>Tools: </b> Python3.7, Flask, HTML/CSS, pandas, scikit learn, tensorflow</p>
+                                <p><b>Type: </b> Machine Learning</p>
+                                <p><b>Function: </b> Determine boba recommendations through any type of drink input: boba, soda, beer, wine, etc..</p>
+                                <p><b>Description: </b> Machine learning application to learn how datasets & MLOps infrastructure work.</p>    
+
+                        <br>
+                        <br>  
+
+                                <!-- Project 3 - "Moneytracker" -->
+                                <a href="https://moneytracker-app-cpp.herokuapp.com/main_transactions"><h2 style="text-decoration: none; font-size:30px;">MoneyTracker App</h2></a>
+                                <p><b>Tools: </b> Python2.7, Flask, HTML/CSS, JQuery</p>
+                                <p><b>Type: </b> Web Application</p>
+                                <p><b>Function: </b> Track Money In & Spending via SQL database</p>
+                                <p><b>Description: </b> Financial Purposes with functional operations. UI needs some work.</p>
+                        
+                        <br>
+                        <br>     
+
+                                <!-- Project 4 - "Password Manager" -->
+                                <h2 style="text-decoration: none; font-size:30px;">Password Manager</h2>
+                                <p><b>Tools: </b> python3.7, mySQL, pandas</p>
+                                <p><b>Type: </b> Desktop Application</p>
+                                <p><b>Function: </b> Store usernames/passwords for an array of applications</p>
+                                <p><b>Description: </b> Simple and useful. Inspired by the many times I've locked myself out.</p>
+
+                        <br>
+                        <br>
+
+                                <!-- Project 5 - "Concord" -->
+                                <a href="https://concord-chat-app.herokuapp.com/login"><h2 style="text-decoration: none; font-size:30px;">Concord</h2></a>
+                                <p><b>Tools: </b>ReactJS, NodeJS, ExpressJS, noSQL - MongoDB, HTML/CSS</p>
+                                <p><b>Type: </b> Web Application</p>
+                                <p><b>Function: </b> VoIP application that mimics Discord.</p>
+                                <p><b>Description: </b> Developed with 5 members for senior project: Josh Coyco, Trenton Condrin, Edward Bui, Ian Nario</p>
+
+                        <!-- End Project Contents -->
+                        </p>
+
+                </section>
+            </div>
+        </div>
+
+        {% endblock %}
