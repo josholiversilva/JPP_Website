@@ -5,7 +5,7 @@ import BobaPage from './Components/BobaPage';
 import BobaAnalytics from './Components/BobaAnalytics';
 import Footer from './Components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './Style/App.css'
+
 
 const joshoriris = true;
 
@@ -16,12 +16,10 @@ const anon = (
 )
 
 const joshiris = (
-  <div class="overlay">
     <Switch>
       <Route exact path='/' component={BobaAnalytics} />
       <Route path='/boba' component={BobaPage} />
     </Switch>
-  </div>
 )
 
 function App() {
