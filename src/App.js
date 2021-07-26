@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Components/Header';
+import Main from './Components/Main';
+import BobaPage from './Components/BobaPage';
+import BobaAnalytics from './Components/BobaAnalytics';
+import Footer from './Components/Footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './Style/App.css'
+
+const joshoriris = true;
+
+const anon = (
+  <div class="overlay">
+    <Main />
+  </div>
+)
+
+const joshiris = (
+  <div class="overlay">
+    <Switch>
+      <Route exact path='/' component={BobaAnalytics} />
+      <Route path='/boba' component={BobaPage} />
+    </Switch>
+  </div>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        <Header />
+        { joshoriris ? joshiris : anon }
+        <Footer />
+      </Router>
+    </>
+  )
 }
+
+
 
 export default App;
